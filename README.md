@@ -1,6 +1,8 @@
-[![pub package](https://img.shields.io/pub/v/flutter_circular_chart.svg)](https://pub.dartlang.org/packages/flutter_circular_chart)
+[![pub package](https://img.shields.io/pub/v/flutter_circular_chart.svg)](https://pub.dartlang.org/packages/awesome_circular_chart)
 
-# Flutter Circular Chart
+# Awesome Circular Chart
+
+Fork from [Flutter Circular Chart](https://github.com/xqwzts/flutter_circular_chart)
 
 A library for creating animated circular chart widgets with Flutter, inspired by [Zero to One with Flutter](https://medium.com/dartlang/zero-to-one-with-flutter-43b13fd7b354).
 
@@ -24,14 +26,14 @@ Check the examples folder for the source code for the above screenshots.
 
 ## Installation
 
-Install the latest version [from pub](https://pub.dartlang.org/packages/flutter_circular_chart#-installing-tab-).
+Install the latest version [from pub](https://pub.dartlang.org/packages/awesome_circular_chart#-installing-tab-).
 
 ## Getting Started
 
 Import the package:
 
 ```dart
-import 'package:flutter_circular_chart/flutter_circular_chart.dart';
+import 'package:awesome_circular_chart/flutter_circular_chart.dart';
 ```
 
 Create a [GlobalKey](https://docs.flutter.io/flutter/widgets/GlobalKey-class.html) to be able to access the chart and update its data:
