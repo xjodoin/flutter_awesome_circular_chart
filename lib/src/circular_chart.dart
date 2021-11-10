@@ -1,10 +1,10 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_circular_chart/src/animated_circular_chart.dart';
-import 'package:flutter_circular_chart/src/entry.dart';
-import 'package:flutter_circular_chart/src/stack.dart';
-import 'package:flutter_circular_chart/src/tween.dart';
+import 'package:awesome_circular_chart/src/animated_circular_chart.dart';
+import 'package:awesome_circular_chart/src/entry.dart';
+import 'package:awesome_circular_chart/src/stack.dart';
+import 'package:awesome_circular_chart/src/tween.dart';
 
 class CircularChart {
   static const double _kStackWidthFraction = 0.75;

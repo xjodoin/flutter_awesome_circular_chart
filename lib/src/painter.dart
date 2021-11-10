@@ -1,9 +1,9 @@
 import 'dart:math' as Math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_circular_chart/src/animated_circular_chart.dart';
-import 'package:flutter_circular_chart/src/circular_chart.dart';
-import 'package:flutter_circular_chart/src/stack.dart';
+import 'package:awesome_circular_chart/src/animated_circular_chart.dart';
+import 'package:awesome_circular_chart/src/circular_chart.dart';
+import 'package:awesome_circular_chart/src/stack.dart';
 
 class AnimatedCircularChartPainter extends CustomPainter {
   AnimatedCircularChartPainter(this.animation, this.labelPainter)

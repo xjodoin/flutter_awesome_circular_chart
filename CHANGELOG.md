@@ -1,3 +1,7 @@
+## [1.0.0] - 2021-11-10
+
+* **Breaking change**. Fork to support null-safety.
+
 ## [0.1.0] - 2018-08-30
 
 * **Breaking change**. Adjusted Flutter SDK constraint to match beta (0.6.0).

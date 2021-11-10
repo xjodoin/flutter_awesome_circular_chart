@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_circular_chart/flutter_circular_chart.dart';
+import 'package:awesome_circular_chart/awesome_circular_chart.dart';
 
 void main() {
   runApp(new MaterialApp(
