@@ -1,4 +1,4 @@
-[![pub package](https://img.shields.io/pub/v/flutter_circular_chart.svg)](https://pub.dartlang.org/packages/awesome_circular_chart)
+[![pub package](https://img.shields.io/pub/v/awesome_circular_chart.svg)](https://pub.dartlang.org/packages/awesome_circular_chart)
 
 # Awesome Circular Chart
 
