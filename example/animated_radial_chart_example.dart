@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:awesome_circular_chart/awesome_circular_chart.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -9,12 +9,10 @@ void main() {
 
 class AnimatedRadialChartExample extends StatefulWidget {
   @override
-  _AnimatedRadialChartExampleState createState() =>
-      new _AnimatedRadialChartExampleState();
+  _AnimatedRadialChartExampleState createState() => new _AnimatedRadialChartExampleState();
 }
 
-class _AnimatedRadialChartExampleState
-    extends State<AnimatedRadialChartExample> {
+class _AnimatedRadialChartExampleState extends State<AnimatedRadialChartExample> {
   final GlobalKey<AnimatedCircularChartState> _chartKey =
       new GlobalKey<AnimatedCircularChartState>();
   final _chartSize = const Size(200.0, 200.0);
@@ -80,20 +78,17 @@ class _AnimatedRadialChartExampleState
 
   @override
   Widget build(BuildContext context) {
-    TextStyle _labelStyle = Theme
-        .of(context)
-        .textTheme
-        .headline6!
-        .merge(new TextStyle(color: labelColor));
+    TextStyle _labelStyle =
+        Theme.of(context).textTheme.headlineMedium!.merge(new TextStyle(color: labelColor));
 
-    return new Scaffold(
-      appBar: new AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: const Text('Percentage Dial'),
       ),
-      body: new Column(
+      body: Column(
         children: <Widget>[
-          new Container(
-            child: new AnimatedCircularChart(
+          Container(
+            child: AnimatedCircularChart(
               key: _chartKey,
               size: _chartSize,
               initialChartData: _generateChartData(value),
@@ -104,22 +99,26 @@ class _AnimatedRadialChartExampleState
               labelStyle: _labelStyle,
             ),
           ),
-          new Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              new RaisedButton(
+              ElevatedButton(
                 onPressed: _decrement,
                 child: const Icon(Icons.remove),
-                shape: const CircleBorder(),
-                color: Colors.red[200],
-                textColor: Colors.white,
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Colors.red[200]),
+                  textStyle: WidgetStateProperty.all(TextStyle(color: Colors.white)),
+                  shape: WidgetStateProperty.all(CircleBorder()),
+                ),
               ),
-              new RaisedButton(
+              ElevatedButton(
                 onPressed: _increment,
                 child: const Icon(Icons.add),
-                shape: const CircleBorder(),
-                color: Colors.blue[200],
-                textColor: Colors.white,
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(Colors.blue[200]),
+                  textStyle: WidgetStateProperty.all(TextStyle(color: Colors.white)),
+                  shape: WidgetStateProperty.all(CircleBorder()),
+                ),
               ),
             ],
           ),
