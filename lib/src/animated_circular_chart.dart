@@ -1,8 +1,7 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:awesome_circular_chart/src/circular_chart.dart';
 import 'package:awesome_circular_chart/src/entry.dart';
 import 'package:awesome_circular_chart/src/painter.dart';
+import 'package:flutter/material.dart';
 
 // The default chart tween animation duration.
 const Duration _kDuration = const Duration(milliseconds: 300);
@@ -36,8 +35,7 @@ class AnimatedCircularChart extends StatefulWidget {
     this.holeLabel,
     this.labelStyle,
     this.edgeStyle = SegmentEdgeStyle.flat,
-  })  : assert(size != null),
-        super(key: key);
+  }) : super(key: key);
 
   /// The size of the bounding box this chart will be constrained to.
   final Size size;
@@ -113,13 +111,9 @@ class AnimatedCircularChart extends StatefulWidget {
   /// ```dart
   /// AnimatedCircularChartState animatedCircularChart = AnimatedCircularChart.of(context);
   /// ```
-  static AnimatedCircularChartState? of(BuildContext context,
-      {bool nullOk: false}) {
-    assert(context != null);
-    assert(nullOk != null);
-
-    final AnimatedCircularChartState? result = context
-        .findAncestorStateOfType<AnimatedCircularChartState>();
+  static AnimatedCircularChartState? of(BuildContext context, {bool nullOk = false}) {
+    final AnimatedCircularChartState? result =
+        context.findAncestorStateOfType<AnimatedCircularChartState>();
 
     if (nullOk || result != null) return result;
 
@@ -188,8 +182,7 @@ class AnimatedCircularChartState extends State<AnimatedCircularChart>
   @override
   void didUpdateWidget(AnimatedCircularChart oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.holeLabel != widget.holeLabel ||
-        oldWidget.labelStyle != widget.labelStyle) {
+    if (oldWidget.holeLabel != widget.holeLabel || oldWidget.labelStyle != widget.labelStyle) {
       _updateLabelPainter();
     }
   }
@@ -217,12 +210,11 @@ class AnimatedCircularChartState extends State<AnimatedCircularChart>
 
   void _updateLabelPainter() {
     if (widget.holeLabel != null) {
-      TextStyle? _labelStyle =
-          widget.labelStyle ?? Theme.of(context).textTheme.bodyText1;
+      TextStyle? _labelStyle = widget.labelStyle ?? Theme.of(context).textTheme.bodyLarge;
       _labelPainter
         ..text = new TextSpan(style: _labelStyle, text: widget.holeLabel)
         ..textDirection = Directionality.of(context)
-        ..textScaleFactor = MediaQuery.of(context).textScaleFactor
+        ..textScaler = MediaQuery.of(context).textScaler
         ..layout();
     } else {
       _labelPainter.text = null;

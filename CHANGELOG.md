@@ -1,3 +1,7 @@
+## [1.0.1] - 2024-05-31
+
+* **Compatibility with Flutter 3.22.0. Adjusted Flutter SDK constraint to 3.22.0 and Dart SDK 3.4.0
+
 ## [1.0.0] - 2021-11-10
 
 * **Breaking change**. Fork to support null-safety.
